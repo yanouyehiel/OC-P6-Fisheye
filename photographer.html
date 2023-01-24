@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <title>Fisheye - photographe </title>
+  </head>
+  <body>
+    <!-- Header page - Logo - Homepage button -->
+    <div id="main-wrapper" aria-hidden=”false”>
+      <header>
+        <a href="index.html" aria-label="link to homepage">
+          <img src="assets/images/logo.png" class="logo" alt="Fisheye Home page" />
+        </a>
+      </header>
+
+      <!-- Photograph Header - Main informations -->
+      <main id="main">
+        <section class="photographer-header" role="heading">
+          <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        </section>
+
+        <!-- Template du contenu de la modal -->
+        <!--section class="media-modal" onclick="displayModal()" role="heading">
+        </section-->
+
+        <!-- Media section -->
+        <section class="photographer-media"></section>
+
+        <!-- Modal Lightbox -->
+        <section
+          id="lightbox-container"
+          aria-roledescription="carousel"
+          aria-label="Médias du photographe"
+          ></section>
+
+          <!-- Aside : likes + price/day -->
+        <aside id="photographer-likes-price" role="complementary">
+          <!-- <p> 297 081<i class="fas fa-heart"></i></p>
+          <p>300€/jour</p> -->
+        </aside>
+
+      </main>
+
+      <!-- Contact Form -->
+      <div
+        id="contact_modal"
+        role="dialog"
+        aria-label="contact-form"
+        aria-hidden=”true”
+        aria-labelledby="form-title"
+        tabindex="0";
+        >
+        <div class="modal">
+          <header class="contact_modal_header">
+            <h1 id="form-title">Contactez-moi</h1>
+            <button aria-label="close Contact Form" tabindex="0">
+              <img
+              src="assets/icons/close.svg"
+              alt="icône croix pour fermer la modale de contact"
+              onclick="closeModal()"
+              />
+            </button>
+          </header>
+
+          <form
+            id="contact_form"
+            action="photographer.html"
+            methode="get"
+          >
+            <div role="group" aria-labelledby="contact informations">
+              <div>
+                <label for="first-name">Prénom</label>
+                <input
+                  class="contact_input"
+                  type="text"
+                  id="first-name"
+                  name="user_first-name">
+              </div>
+
+              <div>
+                <label for="last-name">Nom</label>
+                <input
+                  class="contact_input"
+                  type="text"
+                  id="last-name"
+                  name="user_last-name"
+                  >
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input
+                  class="contact_input"
+                  type="email"
+                  id="email"
+                  name="user_email"
+                  >
+              </div>
+            </div>
+            <div>
+              <label for="msg">Votre message</label>
+              <textarea
+                name="user_message"
+                id="msg"
+                cols="60"
+                rows="10">
+              </textarea>
+            </div>
+
+            <button
+            class="contact_button"
+            aria-label="send"
+            >Envoyer</button>
+          </form>
+        </div>
+      </div>
+
+
+
+      <div id="lightbox__container" aria-hidden="true"> 
+        <div class="lightbox">
+            
+        </div>
+        <button id="lightbox-close" onclick="closeModalLightbox()">
+          <img src="assets/icons/close-lightbox.svg" alt="croix pour fermer la lightbox" width="50%">
+        </button>
+
+        <button class="lightbox-prev ">
+          <img src="assets/icons/next.svg" alt="chevron d'affichage image précédente" width="100%">
+        </button>
+
+        <button class="lightbox-next">
+          <img src="assets/icons/next.svg" alt="chevron d'affichage image suivante" width="100%">
+        </button>
+      </div>
+
+
+    </div>
+    <!-- Script JS -->
+    <script src="/js/factories/media.js"></script>
+    <script src="/js/factories/photographer.js"></script>
+    <script src="/js/pages/photographer.js"></script>
+    <script src="/js/utils/contactForm.js"></script>
+    <!-- <script src="/js/utils/lightbox.js"></script> -->
+  </body>
+</html>

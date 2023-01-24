@@ -1,0 +1,253 @@
+@import url("components.css");
+/*@import url("modal.css");*/
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+}
+
+a:focus {
+  color: #901C1C;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+
+.index__header-title {
+  color: #901C1C;
+  margin-right: 100px;
+}
+
+.logo {
+  height: 50px;
+  margin-left: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .logo {
+    margin-left: 50px;
+  }
+}
+
+a:hover, input:hover, button:hover, select:hover,
+a:focus, input:focus, button:focus, select:focus {
+  font-weight: bold;
+}
+
+/* Photographers */
+
+.photographer_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 70px;
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .photographer_section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.photographer-card {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.photographer-card__link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.photographer-card__link:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.photographer-name {
+  color: #D3573C;
+  font-size: 1.8rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+.photographer__avatar {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5em;
+}
+
+@media screen and (max-width: 900px) {
+  .photographer__avatar {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+.photographer_section a {
+  text-decoration: none;
+}
+
+.photographer_section p {
+  margin: 0.1em;
+}
+
+
+.photographer-location {
+  color: #901C1C;
+}
+
+.pricePerDay {
+  color: #525252;
+}
+
+
+
+/* PHOTOGRAPHER.HTML - PHOTOGRAPHER HEADER */
+
+.photographer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FAFAFA;
+  height: 300px;
+  margin: 0 100px;
+  padding: 0 3em;
+}
+
+.photographer-header-name {
+  font-size: 3.4rem;
+  font-weight: 100;
+  color: #D3573C;
+}
+
+@media screen and (max-width: 900px) {
+  .photographer-header-name {
+    margin: 0;
+  }
+}
+
+.photographer-header-location {
+  color: #901C1C;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+  .photographer-header {
+    margin: 0;
+  }
+}
+
+
+
+
+/* PHOTOGRAPHER.HTML - MEDIAS GALLERY */
+
+.photographer-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 80px;
+  margin: 6.5em;
+  /* grid-auto-rows: 1fr 1fr; */
+}
+
+@media screen and (max-width: 900px) {
+  .photographer-media {
+    margin: 2em;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+.media-item {
+  grid-auto-rows: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  color: #901C1C;
+  height: 350px;
+  /* border: 1px solid black; */
+  font-size: 1.2rem;
+}
+
+.media-item__img,
+.media-item__video {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.media-item__img:hover,
+.media-item__video:hover {
+  transform: scale(1.1);
+}
+
+.media-item__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.media-item__likes-section {
+  display: flex;
+}
+
+#nbLikes {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.likes-icon {
+  font-size: 1.2rem;
+  color: #901C1C;
+}
+
+/* .fa-heart {
+  color: #901C1C;
+} */
+
+/* aside block with price and likes */
+.photographer-price {
+  font-size: 1.2rem;
+}
+
+#photographer-likes-price {
+display: flex;
+justify-content: space-around;
+align-items: center;
+position: fixed;
+bottom: 0em;
+right: 1em;
+background-color: #DB8876;
+color: black;
+width: 35%;
+height: 60px;
+font-size: 2em;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+/* .media {
+  width: 300px;
+  height: 300px;
+} */
+
+/* .wrapper-price {
+  width: 30px;
+  background-color: #D3573C;
+  position: fixed;
+  left: auto;
+  right: 10px;
+} */
